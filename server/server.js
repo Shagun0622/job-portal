@@ -16,7 +16,7 @@ await connectDB();
 app.use(cors());
 
 
-app.use(express.json());
+
 
 
 app.post(
@@ -25,6 +25,7 @@ app.post(
   clerkWebhooks
 );
 
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("API Working");
